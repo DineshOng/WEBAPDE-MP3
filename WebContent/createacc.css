@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	font-family: Roboto;
+}
+
+#header {
+	background-color: #3a3a3a;
+	width: auto;
+	height: 23px;
+	padding: 10px;
+}
+
+#searchform {
+	display: inline-block;
+	padding-right: 60px;
+}
+
+#loginform {
+	float: right;
+}
+
+#lbusername, #lbpassword {
+	color: white;
+}
+
+#btcreateacc, #bthome {
+	text-decoration: none;
+	color: black;
+}
+
+#body {
+	margin-top: 20px;
+	text-align: center;
+}
+
+#descriptioninput {
+	height: 50px;
+}
