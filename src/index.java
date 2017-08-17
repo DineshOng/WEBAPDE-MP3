@@ -12,31 +12,21 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
-/**
- * Servlet implementation class index
- */
 @WebServlet("/index")
 public class index extends HttpServlet {
 	private static final long serialVersionUID = 1L;
     private static DB db;
     private static String text = "";
-	
     private static ArrayList<String> id = new ArrayList<String>();
     private static ArrayList<String> u = new ArrayList<String>();
     private static ArrayList<String> t = new ArrayList<String>();
     private static ArrayList<String> d = new ArrayList<String>();
-    /**
-     * @see HttpServlet#HttpServlet()
-     */
+    
     public index() {
         super();
         db = new DB();
-        // TODO Auto-generated constructor stub
     }
 
-	/**
-	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
-	 */
     public static void init(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	text="";
 		ResultSet rs = db.getPhotos("select photoid, username, title, description from photos where privacy='public' order by 1 desc");
@@ -78,9 +68,6 @@ public class index extends HttpServlet {
 		request.getRequestDispatcher("index.jsp").forward(request, response);
 	}
 
-	/**
-	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
-	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		init(request, response);
 		request.getRequestDispatcher("index.jsp").forward(request, response);

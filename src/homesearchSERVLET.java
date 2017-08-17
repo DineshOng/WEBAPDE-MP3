@@ -18,7 +18,6 @@ public class homesearchSERVLET extends HttpServlet {
     
     public homesearchSERVLET() {
         super();
-        // TODO Auto-generated constructor stub
         db = new DB();
     }
 

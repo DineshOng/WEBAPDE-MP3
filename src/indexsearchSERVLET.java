@@ -14,7 +14,6 @@ public class indexsearchSERVLET extends HttpServlet {
     
     public indexsearchSERVLET() {
         super();
-        // TODO Auto-generated constructor stub
         db = new DB();
     }
 
